@@ -1,0 +1,82 @@
+#left{
+width: 190px;
+float: left;
+background-color: orange;
+padding: 8px;
+font-size:11px;
+}
+#left a{
+text-decoration: none;
+color:black;
+}
+#left a:hover{
+text-decoration: underline;
+}
+#main{
+width: 1100px;
+margin: 0 auto;
+padding: 10px;
+background-color: white;
+}
+
+#header{
+margin: 10 auto;
+font-family: "Monospace Bold Italic";
+color: #081f58;
+font-size:44px;
+padding: 10px;
+text-align: center;
+}
+
+#menu{
+margin: 10 auto;
+background-color:#000026;
+color: white;
+padding: 10px;
+text-align: center;
+}
+#menu a{
+color:white;	
+padding:2px;
+font-size: 14px;
+text-decoration: none;
+}
+#menu a:hover{
+color:#000026;
+background-color: white;
+padding:2px;
+font-size: 14px;
+}
+#content{
+width:810;
+margin: 0 0 0 250px;
+}
+#footer{
+margin: 0 auto;
+text-align: center;
+font-size:11px;
+color: #081f58;
+}
+.code{
+background-color: black;
+color: white;
+font-family: "FreeMono Bold";
+font-size: 10px;
+}
+.output{
+background-color: #ffffb2;
+font-family: "Ubuntu Mono", "TlwgMono Bold";
+font-size: 10px;
+}
+.ordinary{
+border-bottom: solid 1px;
+margin:10px;
+padding:10px;
+}
+.problem{
+background-color: #F08080;
+}
+h1{
+	font-size: 20px;
+	font-weight: bold;
+}
