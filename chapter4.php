@@ -117,9 +117,9 @@ for ($i=0; $i < $length; $i++) {
 </div>
 
 
-<div id="ee" class="ordinary problem">
+<div id="ee" class="ordinary">
 <h1>Encoding and Escaping(URLs, SQL, C-String)</h1>
-<br />
+<h2 class="problem">HTML</h2>
 <?php
 //entity-quoting all special characters
 $input = <<< End
@@ -131,9 +131,56 @@ echo "$double <br />";
 //with quote_style parameter
 $both = htmlentities($input, ENT_QUOTES);
 $neither = htmlentities($input, ENT_NOQUOTES);
-
 echo "$both <br /><br />";
 echo $neither;
+
+//URL
+echo "<br />";
+echo "<h2>URL</h2>";
+$name = "Programming PHP";
+$output = rawurlencode($name);
+echo "http://localhost/{$output}";
+
+//C-String
+echo "<br />";
+echo "<h2>C-String</h2>";
+echo stripcslashes("hell\ow\orld");
+?>
+</div>
+
+<div id="cs" class="ordinary">
+<h1>Comparing Strings</h1>
+
+<?php
+// === and == operators
+$o1 = 3;
+$o2 = "3";
+if ($o1 == $o2) {
+    echo("== returns true<br>");
+}
+if ($o1 === $o2) {
+    echo("=== returns true<br>");
+}
+
+//string comparison
+if ("a" < "A"){
+	echo "a is first";
+}
+else if("a" < "A"){
+	echo "its the same";
+}
+else if("a" > "A"){
+	echo "small letter is greater?<br />";	
+}
+
+//explicit string comparison (strcmp)
+$n = strcmp(1, "A");
+echo "<font class='problem'>$n </font><font color=green> //how?</font><br />";
+
+//other variation (strcasecmp)
+$x = strcmp("Batman", "batmAn");
+echo "<font class='problem'>$x </font><font color=green> //how?</font><br />";
+
 ?>
 </div>
 
