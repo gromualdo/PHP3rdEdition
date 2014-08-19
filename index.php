@@ -2,12 +2,13 @@
 include("header.html");
 ?>
 <div id="left">
+<strong><u>Chapter 1 <br />What Does PHP Do?</u></strong><br /><br />
 <a href="#fo">Forms</a><br />
 <a href="#db">Databases</a><br />
 <a href="#gp">Graphics	</a><br />
 </div>
 <div id="content">
-	<div id="#fo" class="ordinary">
+	<div id="fo" class="ordinary">
 		<h1>Forms</h1>
 		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 		            Enter your name: <input type="text" name="name" />
@@ -23,7 +24,7 @@ include("header.html");
 
 <!----------------------- New Topic ------------------------------------>
 
-	 <div id="#db" class="ordinary">
+	 <div id="db" class="ordinary">
 		<h1>Databases</h1>
 		<?php
 			$db = new mysqli("localhost", "root", "", "Chapter2Practice");

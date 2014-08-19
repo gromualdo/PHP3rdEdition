@@ -2,16 +2,20 @@
 include("header.html");
 ?>
 <div id="left">
-<a href="#vi">Variable Interpolation</a><br />
-<a href="#hd">Here Documents</a><br />
-<a href="#ps">Printing Strings</a><br />
-<a href="#aic">Access Individual Characters</a><br />
-<a href="#ee">Encoding and Escaping</a><br />
-<a href="#cs">Comparing Strings</a><br />
-<a href="#mss">Manipulating and Searching Strings</a><br />
-<a href="#re">Regular Expressions</a><br />
+	<strong><u>Chapter 4 <br />Strings</u></strong><br /><br />
+	<a href="#vi">Variable Interpolation</a><br />
+	<a href="#hd">Here Documents</a><br />
+	<a href="#ps">Printing Strings</a><br />
+	<a href="#aic">Access Individual Characters</a><br />
+	<a href="#ee">Encoding and Escaping</a><br />
+	<a href="#cs">Comparing Strings</a><br />
+	<a href="#mss">Manipulating and Searching Strings</a><br />
+	<a href="#re">Regular Expressions</a><br />
 </div>
 <div id="content">
+
+<!-- New Topic  -->
+
 
 <div class="ordinary" id="vi">
 <h1>Variable Interpolation: Curly Brace</h1>
@@ -19,7 +23,11 @@ include("header.html");
 	$n = 12;
 	echo "You are the {$n}th person";
 	?>
-</div>
+<br /><a class="totop" href="#header">go to top</a></div>
+
+
+	<!------------------------- New Topic ------------>
+
 
 <div class="ordinary" id="hd">
 <h1>HereDoc</h1>
@@ -55,7 +63,11 @@ $baryabol
 gagana;
 echo $withbaryabol;
 ?>
-</div>
+<br /><a class="totop" href="#header">go to top</a></div>
+
+
+	<!------------------------- New Topic ------------>
+
 
 <div id="ps" class="ordinary">
 <h1> Printing Strings </h1>
@@ -100,7 +112,10 @@ $obj = new Obj;
 print_r($obj);
 
 ?>
-</div>
+<br /><a class="totop" href="#header">go to top</a></div>
+
+
+	<!------------------------- New Topic ------------>
 
 
 <div id="aic" class="ordinary">
@@ -114,7 +129,10 @@ for ($i=0; $i < $length; $i++) {
 	printf("The %dth character is %s <br />", $i, $string{$i});
 }
 ?>
-</div>
+<br /><a class="totop" href="#header">go to top</a></div>
+
+
+	<!------------------------- New Topic ------------>
 
 
 <div id="ee" class="ordinary">
@@ -146,7 +164,11 @@ echo "<br />";
 echo "<h2>C-String</h2>";
 echo stripcslashes("hell\ow\orld");
 ?>
-</div>
+<br /><a class="totop" href="#header">go to top</a></div>
+
+
+	<!------------------------- New Topic ------------>
+
 
 <div id="cs" class="ordinary">
 <h1>Comparing Strings</h1>
@@ -174,17 +196,177 @@ else if("a" > "A"){
 }
 
 //explicit string comparison (strcmp)
-$n = strcmp(1, "A");
-echo "<font class='problem'>$n </font><font color=green> //how?</font><br />";
+$new = strcmp("A", "2");
+echo "<font class='problem'>$new </font><font color=green> //how?</font><br />";
 
 //other variation (strcasecmp)
-$x = strcmp("Batman", "batmAn");
+$x = strcmp("1", "9");
 echo "<font class='problem'>$x </font><font color=green> //how?</font><br />";
 
-?>
-</div>
+//Approximate Equality
+$geno="geno";
+$jeno="jeno";
 
-</div>
+if (soundex($geno) == soundex($jeno)){
+	echo "soundex: $geno sounds like $jeno <br />";
+}
+else{
+	echo "it doesn't sound alike <br />";
+}
+if (metaphone($geno) == metaphone($jeno)){
+	echo "metaphone: $geno sounds like $jeno <br />";
+}
+else{
+	echo "it doesn't sound alike <br />";
+}
+
+//similar text
+$string1 = "Geno Romualdo";
+$string2 = "Geno Gelle Romualdo";
+$common = similar_text($string1, $string2, $percent);
+printf("They have %d chars in common (%.2f%%).<br />", $common, $percent);
+
+//levenshtein
+$levenshtein = levenshtein($string1, $string2);
+echo $levenshtein;
+?>
+<br /><a class="totop" href="#header">go to top</a></div>
+
+
+	<!------------------------- New Topic ------------>
+
+
+<div id="mss" class="ordinary">
+<h1>Manipulating and Searching Strings</h1>
+<?php
+//substrings
+$cut = substr("caterpillar", 5, 11);
+echo "$cut <br />";
+
+//substring count
+$longmsg = <<< End
+mahabang caterpillar pillars the pillar of pillar in pillar pilapil;
+End;
+$count = substr_count($longmsg, $cut);
+echo "$count <br />";
+
+//substring replace
+$newmsg = substr_replace($longmsg, "o", 15,1);
+echo "$newmsg <br />";
+
+//Miscellanous string functions
+//strrev
+$fruit = "guyabano";
+$reversed = strrev($fruit);
+echo "$reversed <br />";
+
+//str_repeat
+$repeated = str_repeat("$fruit ", 4);
+echo "$repeated <br />";
+
+//str_pad
+$padded = str_pad("$fruit", 20, "yum ", STR_PAD_LEFT);
+echo "$padded <br />";
+
+//explode
+$date = date("m-d-Y");
+$exploded = explode("-", $date);
+print_r($exploded);
+
+//implode
+$imploded = implode("-", $exploded);
+echo "<br /> $imploded <br />";
+
+//tokenizing
+$tokenned = strtok($date, "-");
+echo "$tokenned <br />";
+$tokenned = strtok("-");
+echo "$tokenned <br />";
+$tokenned = strtok("-");
+echo "$tokenned <br /><br />";
+
+$tokenned = strtok($date, "-");
+while ($tokenned !== false){
+	echo("$tokenned <br />");
+	$tokenned = strtok("-");
+}
+
+
+//sscanf() problem
+$ulam = "kare-kare at bagoong";
+$bago = sscanf($ulam, "%s'-'%s' '%s");
+print_r($bago);
+echo "<font color=green> //how?</font><br />";
+
+//string-searching features
+//strpos
+$drink = "sprite+extra joss+GSM blue+mentos=Tipsy Bob";
+$pos = strrpos($drink, "+"); 
+echo "$pos<br />";
+
+//strrpos
+$pos = strrpos($drink, "+"); 
+echo "$pos<br />";
+
+//strstr
+$pos = strstr($drink, "+"); 
+echo "$pos<br />";
+
+//strrchr
+$pos = strrchr($drink, "+"); 
+echo "$pos<br />";
+
+//strspn
+$numbers=93039328;
+$pos = strspn($numbers,"01234567"); 
+echo "$pos<font color=green> //how?</font><br />";
+
+?>
+<br /><a class="totop" href="#header">go to top</a></div>
+
+
+	<!------------------------- New Topic ------------>
+
+
+<div class="ordinary" id="re">
+<h1>Regular Expressions</h1>
+<?php
+
+//basics
+echo preg_match("/k/", "geno kim g\. romualdo"); //returns true
+echo"<br />";
+echo preg_match("/^k/", "geno kim g\. romualdo"); //returns false
+echo"<br />";
+echo preg_match("/do$/", "geno kim g\. romualdo"); //returns true
+echo"<br />";
+echo preg_match("/i$/", "geno kim g\. romualdo"); //returns false
+echo"<br />";
+echo preg_match("/k.m/", "geno kim g\. romualdo"); //returns true
+echo"<br />";
+echo preg_match("/km./", "geno kim g\. romualdo"); //returns false
+echo"<br /><br />";
+
+
+//character classes
+echo preg_match("/k[aeiou]m/", "geno kim g\. romualdo"); //returns true
+echo"<br />";
+echo preg_match("/k[abcd]m/", "geno kim g\. romualdo"); //returns true
+echo"<br />";
+echo preg_match("/k[a-z]m/", "geno kim g\. romualdo"); //returns true
+echo"<br />";
+echo preg_match("/k[A_Z]m/", "geno kim g\. romualdo"); //returns true
+echo"<br /><br />";
+
+//alternatives
+echo preg_match("/kim| kam/", "geno kim g\. romualdo"); //returns true
+echo"<br />";
+echo preg_match("/jon | lyn/", "geno kim g\. romualdo"); //returns true
+echo"<br />";
+?>
+<br /><a class="totop" href="#header">go to top</a></div>
+
+
+
 <?php
 include("footer.html");
 ?>

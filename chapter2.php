@@ -2,16 +2,17 @@
 include("header.html");
 ?>
 <div id="left">
-<a href="#st">Strings</a><br />
-<a href="#ar">Arrays</a><br />
-<a href="#ob">Objects</a><br />
-<a href="#cb">Callbacks</a><br />
-<a href="#vv">Variable Variables</a><br />
-<a href="#vr">Variable References</a><br />
-<a href="#vs">Variable Scope</a><br />
+	<strong><u>Chapter 2 <br />Language Basics</u></strong><br /><br />
+	<a href="#st">Strings</a><br />
+	<a href="#ar">Arrays</a><br />
+	<a href="#ob">Objects</a><br />
+	<a href="#cb">Callbacks</a><br />
+	<a href="#vv">Variable Variables</a><br />
+	<a href="#vr">Variable References</a><br />
+	<a href="#vs">Variable Scope</a><br />
 </div>
 <div id="content">
-	<div id="#st" class="ordinary">
+	<div id="st" class="ordinary">
 		<h1>Strings</h1>
 		<?php
 			$name = "Geno";
@@ -27,7 +28,7 @@ include("header.html");
 
 <!----------------------- New Topic ------------------------------------>
 
-	<div id="#ar" class="ordinary">
+	<div id="ar" class="ordinary">
 		<h1>Arrays</h1>
 		<?php
 			//Normal Array
@@ -52,7 +53,7 @@ include("header.html");
 
 <!----------------------- New Topic ------------------------------------>
 
-	<div id="#ob" class="ordinary">
+	<div id="ob" class="ordinary">
 		<h1>Objects</h1>
 		<?php
 		class Person{
@@ -78,7 +79,7 @@ include("header.html");
 <!----------------------- New Topic ------------------------------------>
 
 
-	<div id="#cb" class="ordinary">
+	<div id="cb" class="ordinary">
 		<h1 class="problem">Callbacks</h1>
 		<?php
 			//$kolbak = function bagongfunction(){
@@ -92,7 +93,7 @@ include("header.html");
 <!----------------------- New Topic ------------------------------------>
 
 
-	<div id="#vv" class="ordinary">
+	<div id="vv" class="ordinary">
 		<h1>Variable Variables</h1>
 		<?php
 			$foo = "bar";
@@ -104,7 +105,7 @@ include("header.html");
 
 <!----------------------- New Topic ------------------------------------>
 
-	<div id="#vr" class="ordinary">
+	<div id="vr" class="ordinary">
 		<h1>Variable References</h1>
 		<?php
 			$realvariable = "Real na";
@@ -124,7 +125,7 @@ include("header.html");
 
 <!----------------------- New Topic ------------------------------------>
 
-	<div id="#vs" class="ordinary">
+	<div id="vs" class="ordinary">
 		<h1>Variable Scope </h1>
 		<?php
 			function updateCounter(){
