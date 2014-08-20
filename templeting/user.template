@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>User Information</title>
+</head>
+<body>
+<p><font face="helvetica,arial">Please enter the following
+information:</font></p>
+<form action="func_template.php">
+<table>
+<tr>
+<td>Name:</td>
+<td><input type="text" name="name" /></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
