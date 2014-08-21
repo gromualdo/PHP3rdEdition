@@ -1,4 +1,6 @@
 <?php
+require('func_template.php');
+
 $bindings['func_template'] = $_SERVER['PHP_SELF'];
 $name = $_GET['name'];
 if (!empty($name)) {

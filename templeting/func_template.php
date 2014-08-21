@@ -1,7 +1,7 @@
 <?php
 function fillTemplate($name, $values = array(), $unhandled = "delete")
 {
-	$templateFile = $_SERVER['DOCUMENT_ROOT'] . '/templates/' . $name;
+	$templateFile = $_SERVER['DOCUMENT_ROOT'] . '/PHPLecture/templeting/' . $name;
 	if ($file = fopen($templateFile, 'r')) {
 		$template = fread($file, filesize($templateFile));
 		fclose($file);

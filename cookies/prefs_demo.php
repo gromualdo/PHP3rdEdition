@@ -4,20 +4,17 @@
 <?php 
 	$bg = $_COOKIE['bg'];
 	$fg = $_COOKIE['fg'];
+	echo $bg;
+	echo $fg;
 ?>
 </head>
-<body bgcolor="<?= $bg; ?>" text="<?= $fg; ?>">
+<body bgcolor="<?php echo $bg; ?>" text="<?php echo $fg; ?>">
 	<p>
 		Hi Hello<br />
 		Aloha Champola!
 	</p>
 	<a href="color.php">Repick</a>
 
-<?php
 
-
-setcookie('fg', '', time()-3600);
-echo $bg;
-?>
 </body>
 </html>

@@ -3,7 +3,7 @@ include("header.html");
 ?>
 <div id="left">
 	<strong><u>Chapter 9 <br />Graphics</u></strong><br /><br />
-	<a href="#st">GG</a><br />
+	<a href="#st">Creating and Drawing Images</a><br />
 
 </div>
 <div id="content">

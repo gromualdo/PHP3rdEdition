@@ -3,7 +3,8 @@ include("header.html");
 ?>
 <div id="left">
 	<strong><u>Chapter 8 <br /> Databases</u></strong><br /><br />
-	<a href="#st">GG</a><br />
+	<a href="#st">MySQLi Add</a><br />
+	<a href="#st">MySQLi Retrieve</a><br />
 
 </div>
 <div id="content">

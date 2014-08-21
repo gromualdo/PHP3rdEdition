@@ -2,7 +2,7 @@
 include("header.html");
 ?>
 <div id="left">
-	<strong><u>Chapter 15<br />Web Services</u></strong><br />
+	<strong><u>Chapter 15<br />Web Services</u></strong><br /><br />
 	<a href="#st">REST Responses</a><br />
 
 </div>

@@ -2,7 +2,7 @@
 include("header.html");
 ?>
 <div id="left">
-	<strong><u>Chapter 12 <br />Security</u></strong><br />
+	<strong><u>Chapter 12 <br />Security</u></strong><br /><br />
 	<a href="#st">Cross-Site Scripting</a><br />
 
 </div>
@@ -17,7 +17,7 @@ include("header.html");
 
 			if(!empty($_POST['uname'])){
 				$html = array('uname'=> htmlentities($_POST['uname'], ENT_QUOTES, 'UTF-8'));
-			echo "this is secured: ". $html['uname'] . "<br />";
+			echo "this is secured:  {$html['uname']} <br />";
 			echo "this is not secured: " . $_POST['uname'];
 			}
 		?>
@@ -30,7 +30,7 @@ include("header.html");
 	<div id="ia" class="ordinary">
 		<h1>SQL Injection</h1>
 			<form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-				<input type="text" name="sql" placeholder="enter anything" />
+				<input type="text" name="sql" placeholder="try to inject SQL (x' OR 1 ='1)" />
 				<input type="submit" name="check">
 			</form>
 		<?php

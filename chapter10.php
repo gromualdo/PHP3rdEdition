@@ -2,7 +2,7 @@
 include("header.html");
 ?>
 <div id="left">
-	<strong><u>Chapter 10<br />PDF</u></strong><br />
+	<strong><u>Chapter 10<br />PDF</u></strong><br /><br />
 	<a href="#st">Simple Example</a><br />
 
 </div>

@@ -82,10 +82,10 @@ include("header.html");
 	<div id="cb" class="ordinary">
 		<h1 class="problem">Callbacks</h1>
 		<?php
-			//$kolbak = function bagongfunction(){
-			//	echo "Gutom na kow!";
-			//}
-			//call_user_func($kolbak);
+			// $kolbak = function bagongfunction(){
+			// 	echo "Gutom na kow!";
+			// }
+			// call_user_func($kolbak);
 		?>
 		<br /><a class="totop" href="#header">go to top</a>
 	 </div>

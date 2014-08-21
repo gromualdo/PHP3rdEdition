@@ -2,7 +2,7 @@
 include("header.html");
 ?>
 <div id="left">
-	<strong><u>Dates and Times</u></strong><br />
+	<strong><u>Dates and Times</u></strong><br /><br />
 	<a href="#dt">DateTime</a><br />
 	<a href="#dz">DateTimeZone</a><br />
 	<a href="#di">DateTimeInterval</a><br />

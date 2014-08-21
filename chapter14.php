@@ -2,8 +2,8 @@
 include("header.html");
 ?>
 <div id="left">
-	<strong><u>Language Basics</u></strong><br />
-	<a href="#st">GG</a><br />
+	<strong><u>Chapter 14<br />PHP on Disparate Platforms</u></strong><br /><br />
+	<a href="#st">PHP_SELF</a><br />
 
 </div>
 <div id="content">

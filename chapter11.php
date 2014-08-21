@@ -2,12 +2,12 @@
 include("header.html");
 ?>
 <div id="left">
-	<strong><u>Chapter 11<br />XML</u></strong><br />
+	<strong><u>Chapter 11<br />XML</u></strong><br /><br />
 	<a href="#st">XML</a><br />
 
 </div>
 <div id="content">
-<div id="ia" class="ordinary">
+	<div id="ia" class="ordinary">
 		<h1>XML</h1>
 		<a href="xml/sample.php">Go to Sample</a>
 	</div>

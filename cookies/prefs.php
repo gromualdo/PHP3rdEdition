@@ -23,8 +23,8 @@
 
 	<p>
 		Thank you!<br />
-		Background: <?php echo "bgName"; ?><br />
-		Foreground: <?php echo "fgName"; ?>
+		Background: <?php echo "$bgName"; ?><br />
+		Foreground: <?php echo "$fgName"; ?>
 	</p>
 		<a href="prefs_demo.php">Click Here</a>
 	</body>

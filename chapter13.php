@@ -4,7 +4,7 @@
 include("header.html");
 ?>
 <div id="left">
-	<strong><u>Chapter 13 <br />Application Techniques</u></strong><br />
+	<strong><u>Chapter 13 <br />Application Techniques</u></strong><br /><br />
 	<a href="#st">Templating</a><br />
 	<a href="#st">Error Handling</a><br />
 

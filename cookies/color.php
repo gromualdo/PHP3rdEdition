@@ -26,5 +26,7 @@
 
 		<input type="submit" value="Change Color">
 	</form>
+	<br />
+	<a href="../chapter7.php">Return to Reviewer</a>
 </body>
 </html>
